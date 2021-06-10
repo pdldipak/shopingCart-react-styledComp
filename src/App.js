@@ -80,6 +80,7 @@ function App() {
             addToCart={addToCart}
             onRemovefromCart={onRemovefromCart}
             setCartItems={setCartItems}
+            totalCartItems={cartItems.length}
           />
         }
       </NavBar>
@@ -102,7 +103,7 @@ function App() {
             </ProductList>
           </Route>
           <Route path="/product/:id">
-            <Product addToCart={addToCart}/>
+            <Product addToCart={addToCart} />
           </Route>
         </Switch>
       </MainContainer>

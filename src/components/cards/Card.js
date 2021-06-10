@@ -25,6 +25,7 @@ const Card = ({
   addToCart,
   onRemovefromCart,
   setCartItems,
+  totalCartItems,
 }) => {
   const sideBarRef = useRef()
   useOnClickOutside(sideBarRef, () => setToggle(false))
@@ -37,7 +38,7 @@ const Card = ({
     <div>
       <Wrapper onClick={() => setToggle(true)}>
         <ShopingCartIcon />
-        <CartCount>1</CartCount>
+        {totalCartItems ? <CartCount>{totalCartItems}</CartCount> : ''}
       </Wrapper>
       <CartSideBar className={isToggle ? 'expand' : 'shrink'} ref={sideBarRef}>
         <SideBarHeader>shopping cart</SideBarHeader>

@@ -8,6 +8,7 @@ const useFetch = (url) => {
 
   useEffect(() => {
     const fetchProducts = () => {
+      setLoading(true)
       axios
         .get(url)
         .then((res) => {

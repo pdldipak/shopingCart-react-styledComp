@@ -24,7 +24,7 @@ const Product = ({ addToCart }) => {
     <ProductContainer>
       {loading && <LoadingSpinner />}
       {error && <p>{error}</p>}
-      {item && (
+      {!loading && item && (
         <ProductDetails>
           <ProductImage src={item.image} alt={item.id}></ProductImage>
           <ProductTitle>{item.title}</ProductTitle>
